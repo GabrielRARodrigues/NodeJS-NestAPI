@@ -21,3 +21,22 @@ Content-Type: application/json
   "email": "gabriel@gmail.com",
   "password": "123456"
 }
+
+###
+
+# @name create_question
+POST {{baseUrl}}/questions
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "title": "Nova Pergunta 2",
+  "content": "Conteúdo da pergunta"
+}
+
+###
+
+# @name fetch_recent_question
+Get {{baseUrl}}/questions?page=2
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
