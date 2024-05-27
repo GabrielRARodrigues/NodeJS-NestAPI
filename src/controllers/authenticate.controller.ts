@@ -10,8 +10,8 @@ import { JwtService } from '@nestjs/jwt'
 import { z } from 'zod'
 import { compare } from 'bcryptjs'
 
-import { PrismaService } from 'src/prisma/prisma.service'
-import { ZodValidationPipe } from 'src/pipes/zod-validation.pipe'
+import { PrismaService } from '@/prisma/prisma.service'
+import { ZodValidationPipe } from '@/pipes/zod-validation.pipe'
 
 const authenticateBodySchema = z.object({
   email: z.string().email(),
@@ -41,7 +41,7 @@ export class AuthenticateController {
 
     const isPasswordValid = await compare(password, user.password)
 
-    if(!isPasswordValid) {
+    if (!isPasswordValid) {
       throw new UnauthorizedException('User credentials do not match')
     }
 
