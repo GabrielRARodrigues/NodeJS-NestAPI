@@ -5,7 +5,7 @@ import { JwtService } from '@nestjs/jwt'
 import request from 'supertest'
 
 import { AppModule } from '@/infra/app.module'
-import { PrismaService } from '@/infra/prisma/prisma.service'
+import { PrismaService } from '@/infra/database/prisma/prisma.service'
 
 describe('Create Question (E2E)', () => {
   let app: INestApplication
