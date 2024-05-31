@@ -30,13 +30,13 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "Nova Pergunta 2",
+  "title": "Nova Pergunta 3",
   "content": "Conteúdo da pergunta"
 }
 
 ###
 
 # @name fetch_recent_question
-Get {{baseUrl}}/questions?page=2
+Get {{baseUrl}}/questions
 Content-Type: application/json
 Authorization: Bearer {{authToken}}
