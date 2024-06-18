@@ -13,6 +13,8 @@ import { DeleteQuestionController } from './controllers/delete-question.controll
 import { AnswerQuestionController } from './controllers/answer-question.controller'
 import { EditAnswerController } from './controllers/edit-answer.controller'
 import { DeleteAnswerController } from './controllers/delete-answer.controller'
+import { FetchQuestionAnswersController } from './controllers/fetch-question-answers.controller'
+import { ChooseQuestionBestAnswerController } from './controllers/choose-question-best-answer.controller'
 
 import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question'
 import { FetchRecentQuestionsUseCase } from '@/domain/forum/application/use-cases/fetch-recent-questions'
@@ -24,6 +26,8 @@ import { DeleteQuestionUseCase } from '@/domain/forum/application/use-cases/dele
 import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answer-question'
 import { EditAnswerUseCase } from '@/domain/forum/application/use-cases/edit-answer'
 import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete-answer'
+import { FetchQuestionAnswersUseCase } from '@/domain/forum/application/use-cases/fetch-question-answers'
+import { ChooseQuestionBestAnswerUseCase } from '@/domain/forum/application/use-cases/choose-question-best-answer'
 
 @Module({
   imports: [DatabaseModule, CryptographyModule],
@@ -37,7 +41,9 @@ import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete
     DeleteQuestionController,
     AnswerQuestionController,
     EditAnswerController,
-    DeleteAnswerController
+    DeleteAnswerController,
+    FetchQuestionAnswersController,
+    ChooseQuestionBestAnswerController
   ],
 
   providers: [
@@ -50,7 +56,9 @@ import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete
     DeleteQuestionUseCase,
     AnswerQuestionUseCase,
     EditAnswerUseCase,
-    DeleteAnswerUseCase
+    DeleteAnswerUseCase,
+    FetchQuestionAnswersUseCase,
+    ChooseQuestionBestAnswerUseCase
   ]
 })
 export class HttpModule {}
