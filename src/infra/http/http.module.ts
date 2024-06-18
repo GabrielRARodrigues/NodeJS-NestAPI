@@ -15,6 +15,8 @@ import { EditAnswerController } from './controllers/edit-answer.controller'
 import { DeleteAnswerController } from './controllers/delete-answer.controller'
 import { FetchQuestionAnswersController } from './controllers/fetch-question-answers.controller'
 import { ChooseQuestionBestAnswerController } from './controllers/choose-question-best-answer.controller'
+import { CommentOnQuestionController } from './controllers/comment-on-question.controller'
+import { DeleteQuestionCommentController } from './controllers/delete-question-comment.controller'
 
 import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question'
 import { FetchRecentQuestionsUseCase } from '@/domain/forum/application/use-cases/fetch-recent-questions'
@@ -28,6 +30,8 @@ import { EditAnswerUseCase } from '@/domain/forum/application/use-cases/edit-ans
 import { DeleteAnswerUseCase } from '@/domain/forum/application/use-cases/delete-answer'
 import { FetchQuestionAnswersUseCase } from '@/domain/forum/application/use-cases/fetch-question-answers'
 import { ChooseQuestionBestAnswerUseCase } from '@/domain/forum/application/use-cases/choose-question-best-answer'
+import { CommentOnQuestionUseCase } from '@/domain/forum/application/use-cases/comment-on-question'
+import { DeleteQuestionCommentUseCase } from '@/domain/forum/application/use-cases/delete-question-comment'
 
 @Module({
   imports: [DatabaseModule, CryptographyModule],
@@ -43,7 +47,9 @@ import { ChooseQuestionBestAnswerUseCase } from '@/domain/forum/application/use-
     EditAnswerController,
     DeleteAnswerController,
     FetchQuestionAnswersController,
-    ChooseQuestionBestAnswerController
+    ChooseQuestionBestAnswerController,
+    CommentOnQuestionController,
+    DeleteQuestionCommentController
   ],
 
   providers: [
@@ -58,7 +64,9 @@ import { ChooseQuestionBestAnswerUseCase } from '@/domain/forum/application/use-
     EditAnswerUseCase,
     DeleteAnswerUseCase,
     FetchQuestionAnswersUseCase,
-    ChooseQuestionBestAnswerUseCase
+    ChooseQuestionBestAnswerUseCase,
+    CommentOnQuestionUseCase,
+    DeleteQuestionCommentUseCase
   ]
 })
 export class HttpModule {}
