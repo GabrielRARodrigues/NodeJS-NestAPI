@@ -21,6 +21,7 @@ import { CommentOnAnswerController } from './controllers/comment-on-answer.contr
 import { DeleteAnswerCommentController } from './controllers/delete-answer-comment.controller'
 import { FetchQuestionCommentsController } from './controllers/fetch-question-comments.controller'
 import { FetchAnswerCommentsController } from './controllers/fetch-answer-comments.controller'
+import { UploadAttachmentsController } from './controllers/upload-attachment.controller'
 
 import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question'
 import { FetchRecentQuestionsUseCase } from '@/domain/forum/application/use-cases/fetch-recent-questions'
@@ -61,7 +62,8 @@ import { FetchAnswerCommentsUseCase } from '@/domain/forum/application/use-cases
     CommentOnAnswerController,
     DeleteAnswerCommentController,
     FetchQuestionCommentsController,
-    FetchAnswerCommentsController
+    FetchAnswerCommentsController,
+    UploadAttachmentsController
   ],
 
   providers: [
